@@ -1,13 +1,11 @@
 <template>
-  <swiper class="detail-swiper">
-    <swiper-item v-for="(item, index) in topImages" :key="index">
+  <van-swipe class="my-swipe" :autoplay="3000" indicator-color="white">
+    <van-swipe-item v-for="(item, index) in topImages" :key="index">
       <img :src="item" alt="" />
-    </swiper-item>
-  </swiper>
+    </van-swipe-item>
+  </van-swipe>
 </template>
 <script>
-import { Swiper, SwiperItem } from "@/components/common/swiper/index";
-
 export default {
   name: "DetailSwiper",
   props: {
@@ -18,18 +16,13 @@ export default {
       },
     },
   },
-
-  components: {
-    Swiper,
-    SwiperItem,
-  },
-
-  mounted() {},
-  methods: {},
 };
 </script>
 <style scoped>
-.detail-swiper {
+.my-swipe .van-swipe-item {
   height: 300px;
+}
+.van-swipe-item img {
+  width: 100%;
 }
 </style>

@@ -104,7 +104,7 @@ export default {
       );
       //店铺信息
       this.shop = new shop(data.shopInfo);
-      console.log(data);
+
       //商品详情
       this.detailInfo = data.detailInfo;
       //获取尺码表
