@@ -83,7 +83,12 @@ export default {
     this.getHomeGoodsData("sell");
   },
   mixins: [itemListenerMixin],
-  mounted() {},
+  mounted() {
+    if (location.href.indexOf("#reloaded") == -1) {
+      location.href = location.href + "#reloaded";
+      location.reload();
+    }
+  },
   computed: {
     showGoods() {
       return this.goods[this.currentItem].list;

@@ -3,8 +3,11 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import toast from '@/components/common/toast'
+//按需导入vant
+import './vant'
 
 Vue.config.productionTip = false
+
 
 Vue.prototype.$bus = new Vue()
     //安装toast插件
